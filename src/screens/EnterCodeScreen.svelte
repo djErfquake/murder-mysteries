@@ -4,33 +4,13 @@
     import { createEventDispatcher } from 'svelte';
     const dispatch = createEventDispatcher();
 
-    let character = null;
-    let error = null;
-
-    const getCharacter = async code => {
-        error = null;
-        const res = await fetch(`character/${code}`);
-        if (res.ok) {
-            let character = await res.json();
-            dispatch('gotCharacter', character);
-        }
-        else {
-            error = "Invalid Code";
-        }
-    }
-
-    const codeEntered = e => {
-        getCharacter(e.detail);
+    const gotCharacter = e => {
+        dispatch('gotCharacter', e.detail);
     }
 </script>
 
 <div>
-    {#if !character}
-    <EnterCode on:codeEntered={codeEntered}></EnterCode>
-    {/if}
-    {#if error}
-    {error}
-    {/if}
+    <EnterCode on:gotCharacter={gotCharacter}></EnterCode>
 </div>
 
 <style>
