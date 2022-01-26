@@ -1,11 +1,32 @@
 import DoctorRobotNeck from "./characters/DoctorRobotNeck";
+import WhizzoGirl from "./characters/WhizzoGirl";
 
-const characters = [
-    DoctorRobotNeck
+let characters = [
+    DoctorRobotNeck,
+    WhizzoGirl
 ];
+
+const players = characters.map(c => {
+    return {
+        playerName: c.player.person,
+        characterName: c.name
+    };
+});
+
+
+characters.forEach((c, ci) => {
+    c.others.forEach((o, oi) => {
+        let otherPlayer = players.find(p => p.characterName == o.name);
+        if (otherPlayer) {
+            characters[ci].others[oi].player = otherPlayer.playerName;
+        }
+    });
+});
+
 
 
 const getCharacter = code => {
+    console.log('PLAYERS', JSON.stringify(players));
     const character = characters.find(c => c.player.code.toUpperCase() == code.toUpperCase());
     return character;
 };

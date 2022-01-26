@@ -25,17 +25,17 @@ const background = [
     `As for last night’s party, it’s clear to you that everyone has been drugged: as everyone appears to have a hangover, and nobody can remember much about last night. Clearly you need to apply some scientific rigor into finding out what happened last night (including what happened to poor Bernard, what happened to the computer and what happened to your satellite). It would be a lot easier if you didn’t also have a hangover!`
 ];
 const goals = [
-    { name: `Last Night`, description: `Find out what happened last night – apply some scientific thinking to the problem.` },
-    { name: `The computer code`, description: `Find the code that will restart the computer so that you can unlock the base, leave and retire to Hawaii with your life savings.` },
-    { name: `Incriminating evidence`, description: `Find your satellite and use it to reverse global warming.` },
-    { name: `Look after Charity`, description: `Protect and help your daughter Charity at all costs, even above your own goals. Don’t let anyone know you’re her father – it’s just too dangerous to risk.` },
+    { name: `Last Night`, description: [`Find out what happened last night – apply some scientific thinking to the problem.` ]},
+    { name: `The computer code`, description: [`Find the code that will restart the computer so that you can unlock the base, leave and retire to Hawaii with your life savings.` ]},
+    { name: `Incriminating evidence`, description: [`Find your satellite and use it to reverse global warming.` ]},
+    { name: `Look after Charity`, description: [`Protect and help your daughter Charity at all costs, even above your own goals. Don’t let anyone know you’re her father – it’s just too dangerous to risk.` ]},
 ];
 const others = [
-    { name: `WhizzoGirl`, description: `WhizzoGirl is also your daughter Charity Finkle, but she doesn’t know that you’re her father. You’re surprised at how little she’s turned out like you: she’s empty-headed and not much use in a fight, being more interested in clothes, makeup and fame. But she is your daughter and you love her regardless.` },
-    { name: `Captain Amazing!`, description: `The Captain has proved very useful in getting ReptoMan incarcerated, and you are pleased with him much as you would be with a dog who has just done a neat trick. He is also very useful in drawing attention away from you, as he always steals the limelight.` },
-    { name: `Shaman`, description: `As you are a man of science, you’re not sure about Shaman’s claims to be able to talk to the dead. Perhaps that claim can be tested on Bernard. If it works, it might even reveal something about Bernard’s unfortunate death.` },
-    { name: `Bloody Mary`, description: `Bloody Mary is brutish and uncultured, but a reliable team member and quite intelligent. One of her famous potions might help you remember what happened last night.` },
-    { name: `S.`, description: `S. is a new member of the squad and only joined yesterday. It seems suspicious that Bernard died on the day that S. joined the squad.` },
+    { name: `WhizzoGirl`, description: [`WhizzoGirl is also your daughter Charity Finkle, but she doesn’t know that you’re her father. You’re surprised at how little she’s turned out like you: she’s empty-headed and not much use in a fight, being more interested in clothes, makeup and fame. But she is your daughter and you love her regardless.`] },
+    { name: `Captain Amazing!`, description: [`The Captain has proved very useful in getting ReptoMan incarcerated, and you are pleased with him much as you would be with a dog who has just done a neat trick. He is also very useful in drawing attention away from you, as he always steals the limelight.`] },
+    { name: `Shaman`, description: [`As you are a man of science, you’re not sure about Shaman’s claims to be able to talk to the dead. Perhaps that claim can be tested on Bernard. If it works, it might even reveal something about Bernard’s unfortunate death.`] },
+    { name: `Bloody Mary`, description: [`Bloody Mary is brutish and uncultured, but a reliable team member and quite intelligent. One of her famous potions might help you remember what happened last night.`] },
+    { name: `S.`, description: [`S. is a new member of the squad and only joined yesterday. It seems suspicious that Bernard died on the day that S. joined the squad.`]}
 ];
 
 const tips = [
@@ -43,17 +43,15 @@ const tips = [
     `Have a look at Bernard’s body for clues.`
 ];
 
-const abilities = [
-    { name: `Examine`, uses: -1, description: `You have the knowledge and skills to examine a corpse and ascertain a cause and time of death. You may or may not choose to make the results public knowledge.`},
-    { name: `Analyze`, uses: -1, description: `Your robotic neck has many useful gadgets installed, including one that can tell you if a liquid is contaminated, and if so, what the contaminants are.`},
-    { name: `Mind-Control-Ray`, uses: 5, description: `From your neck you can shoot a ray which makes your victim either show you their Secret, give you an Item at random or perform a minor task for you (your choice). Takes fifteen minutes to recharge after use.`},
-];
+// const abilities = [
+//     { name: `Examine`, uses: -1, description: [`You have the knowledge and skills to examine a corpse and ascertain a cause and time of death. You may or may not choose to make the results public knowledge.`]},
+//     { name: `Analyze`, uses: -1, description: [`Your robotic neck has many useful gadgets installed, including one that can tell you if a liquid is contaminated, and if so, what the contaminants are.`]},
+//     { name: `Mind-Control-Ray`, uses: 5, description: [`From your neck you can shoot a ray which makes your victim either show you their Secret, give you an Item at random or perform a minor task for you (your choice). Takes fifteen minutes to recharge after use.`]},
+// ];
 
 const information = {
     secret: `Your real name is Amiability Finkle, and you created ReptoMan!`,
-    information: [
-        `Puss-in-Boots appears to be the result of the same sort of genetic manipulation that created ReptoMan.`
-    ]
+    information: `Puss-in-Boots appears to be the result of the same sort of genetic manipulation that created ReptoMan.`
 };
 
 const player = {
@@ -70,6 +68,6 @@ export default {
     goals,
     others,
     tips,
-    abilities,
+    // abilities,
     information
 };
